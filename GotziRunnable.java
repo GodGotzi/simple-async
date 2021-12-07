@@ -11,7 +11,7 @@ public abstract class GotziRunnable {
 
     public abstract void run();
 
-    public GotziRunnable runTaskLater(int milliseconds) {
+    public GotziRunnable runAsyncTaskLater(int milliseconds) {
         this.thread = new Thread(() -> {
             try {
                 Thread.sleep(milliseconds);

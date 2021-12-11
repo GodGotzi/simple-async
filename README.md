@@ -1,2 +1,2 @@
 # GotziRunnable
-Java Async Thread Helper
+Java Thread Runnable Helper

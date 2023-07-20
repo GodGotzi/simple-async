@@ -1,13 +1,9 @@
-package at.gotzi.HelloWorld;
-
-public abstract class GotziRunnable {
+public abstract class AsyncRunnable {
 
     private Thread thread;
     private boolean stop;
 
-    public GotziRunnable() {
-
-    }
+    public AsyncRunnable() { }
 
     public abstract void run();
 
@@ -22,6 +18,7 @@ public abstract class GotziRunnable {
                 return;
             this.run();
         });
+        
         this.thread.start();
         return this;
     }
@@ -34,6 +31,7 @@ public abstract class GotziRunnable {
                 this.run();
             }
         });
+        
         this.thread.start();
         return this;
     }
@@ -59,6 +57,7 @@ public abstract class GotziRunnable {
                }
            }
         });
+        
         this.thread.start();
         return this;
     }
